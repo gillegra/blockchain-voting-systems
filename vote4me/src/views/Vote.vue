@@ -1,7 +1,7 @@
 <template>
-	<div class="home">  
+	<div class="vote">  
 		<Navbar/>
-		<h1>This is the homepage</h1>
+		<h1>This is the voting page</h1>
 	</div>
 </template>
 
