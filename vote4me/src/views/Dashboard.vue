@@ -1,7 +1,9 @@
 <template>
 	<div class="dashboard">  
 		<Navbar/>
-		<h1>This is the Dashboard</h1>
+		<v-container>
+			<h1>dashboard page</h1>
+		</v-container>
 	</div>
 </template>
 

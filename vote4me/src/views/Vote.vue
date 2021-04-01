@@ -1,7 +1,9 @@
 <template>
 	<div class="vote">  
 		<Navbar/>
-		<h1>This is the voting page</h1>
+		<v-container>
+			<h1>voting page</h1>
+		</v-container>
 	</div>
 </template>
 
