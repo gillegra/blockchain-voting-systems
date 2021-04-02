@@ -34,7 +34,7 @@ import Navbar from '@/components/Navbar.vue'
 export default {
 	components: {
 		Navbar,
-	}
+	}, 
 }
 </script>
 
@@ -42,6 +42,7 @@ export default {
 
 .homeButton {
 	width: 130px;
+	min-width: 130px;
 	border-radius: 7px;
 
 }
