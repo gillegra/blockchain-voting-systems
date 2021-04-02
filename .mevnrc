@@ -1,0 +1,8 @@
+{
+  "name": "vote4me-server",
+  "template": "PWA",
+  "isConfigured": {
+    "client": true,
+    "server": true
+  }
+}
