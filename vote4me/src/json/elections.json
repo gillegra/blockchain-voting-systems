@@ -1,0 +1,5 @@
+[
+    {"name": "Election One (Federal Election)", "candidates": ["Bob", "Jean", "Joe", "Phil"]},
+    {"name": "Election Two (State Election)", "candidates": ["Greg", "Lisa", "Janet", "Joshua"]},
+    {"name": "Election Three (Municipal Election)", "candidates": ["Paul", "Denise", "Eliza", "Cedric"]}
+]

@@ -24,6 +24,11 @@ const routes = [
 		component: Vote
 	},
 	{
+		path: '/vote/:next',
+		name: 'CastVote',
+		component: Vote
+	},
+	{
 		path: '/dashboard',
 		name: 'Dashboard',
 		component: Dashboard

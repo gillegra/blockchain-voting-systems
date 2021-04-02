@@ -4,7 +4,7 @@
         <v-container style="height: 100%">
 			<v-row style="height: 100%" no-gutters align="center" justify="center">
 				<v-col class="noDisplayOnMobile" cols="12" sm="5" align="center">
-					<img src="../assets/loginArt.svg" alt="illustration of man sitting with a laptop with surrounding envelope and padlock" height="auto" width="auto"/>
+					<img src="@/assets/loginArt.svg" alt="illustration of man sitting with a laptop with surrounding envelope and padlock" height="auto" width="auto"/>
 				</v-col>
 				<v-col cols="12" sm="5" align="center">
 					<h1 style="font-size: 4rem; font-weight: 400;">Vote4Me</h1>

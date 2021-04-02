@@ -1,7 +1,7 @@
 <template>
     <v-app-bar flat app dark color="primary" >
         <div>
-            <a href="/home" class="text-decoration-none whiteText biggerText" >VOTE4ME</a>
+            <router-link to="/home" class="text-decoration-none whiteText biggerText" >Vote4Me</router-link>
         </div>
         <v-spacer></v-spacer>
         <div v-if="forLogin == 'true'">
