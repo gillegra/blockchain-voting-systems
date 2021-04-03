@@ -99,6 +99,7 @@ class Controller {
 		);
 
 		this.blockchain.addNewBlock(newBlock);
+		this.readyBallots = [];
 	}
 }
 
