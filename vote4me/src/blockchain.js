@@ -45,7 +45,9 @@ class Blockchain {
 	}
 
 	createGenesisBlock() {
-		return new Block(0, "03/01/2009", "Initial block in the chain", "0");
+		let ballotArray = [];
+		ballotArray.push(new Ballot("Genesis", "Genesis"));
+		return new Block(0, "03/01/2009", ballotArray, "0");
 	}
 
 	getLatestBlock() {
@@ -93,13 +95,38 @@ class Controller {
 
 	mineBlock() {
 		let newBlock = new Block(
-			this.blockchain.length,
+			this.blockchain.blockchain.length,
 			Date.now(),
 			this.readyBallots
 		);
 
+		console.log("Mining new block with " + this.readyBallots.length + " ballots...");
+
 		this.blockchain.addNewBlock(newBlock);
 		this.readyBallots = [];
+	}
+
+	checkBallotStatus(voterID) {
+		for (let i = 0; i < this.readyBallots.length; i++) {
+			if (this.readyBallots[i].voter == voterID) {
+				// The ballot is submitted, waiting to be added to the blockchain
+				return "Submitted";
+			}
+		}
+
+		for (let i = 0; i < this.blockchain.blockchain.length; i++) {
+			for (let j = 0; j < this.blockchain.blockchain[i].data.length; j++) {
+				if (this.blockchain.blockchain[i].data[j].voter == voterID){
+					// The ballot is on the blockchain
+					return "Confirmed on Blockchain in Block " + 
+						this.blockchain.blockchain[i].index;
+				}
+				
+			}
+		}
+
+		// Else, if not found in either the readyBallots or the blockchain
+		return "Ballot not found";
 	}
 }
 
@@ -139,12 +166,21 @@ let ballot3 = new Ballot("wayne doe",
 testController.castBallot(ballot3);
 
 
+// Testing the checkBallotStatus function:
+console.log("Status of 'jane doe' vote: " + testController.checkBallotStatus("jane doe"));
+
 // Once we have a few ballots, we can mine a block, adding it to
 // our blockchain
 testController.mineBlock();
 
-// Here we can log the results
+
+// Here we can log the blockchain directly
 console.log(JSON.stringify(testController.getBlockchain(), null, 4));
-console.log(testController.getBlockchain().checkChainValidity());
 
 
+console.log("Is this chain valid: " + testController.getBlockchain().checkChainValidity());
+
+// Testing checkBallotStatus again:
+console.log("Status of 'jane doe' vote: " + testController.checkBallotStatus("jane doe"));
+console.log("Status of 'joe doe' vote: " + testController.checkBallotStatus("joe doe"));
+console.log("Status of 'refrigerator doe' vote: " + testController.checkBallotStatus("refrigerator doe"));
