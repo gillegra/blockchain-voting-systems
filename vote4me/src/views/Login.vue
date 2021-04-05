@@ -20,6 +20,7 @@
 					<v-text-field
 						style="margin-top: -5px;"
 						class="textFieldSize"
+						type="password"
 						label="Password"
 						rounded
 						filled
