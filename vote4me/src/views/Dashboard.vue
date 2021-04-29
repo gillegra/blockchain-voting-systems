@@ -30,6 +30,7 @@ export default {
         border-style: hidden;
         border-radius: 7px;
         width: 30%;
+        min-width: 300px;
     }
     .dashboardInfo {
         margin-top: 30px;
@@ -38,5 +39,6 @@ export default {
         border-style: hidden;
         border-radius: 7px;
         height: 100%;
+        min-width: 330px;
     }
 </style>
