@@ -18,7 +18,6 @@
 export default {
     data: function() {
         return {
-            elections: Elections,
             chosenElection: ""
         }
     },
