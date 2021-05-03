@@ -1,4 +1,4 @@
-import {Ballot, Block, Blockchain, Controller} from 'blockchain.js';
+import {Ballot, Controller} from 'blockchain.js';
 
 // For testing and demonstration
 
