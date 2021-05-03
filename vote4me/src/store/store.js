@@ -8,7 +8,7 @@ const store = new Vuex.Store({
     state: {
 		electionSelection: "",
 		vote: "",
-        voteStatus: "",
+        voteStatus: "Ballot not found",
 	},
 	mutations: {
         updateElectionSelection(state, electionSelected) {
