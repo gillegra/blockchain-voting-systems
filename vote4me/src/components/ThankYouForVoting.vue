@@ -15,8 +15,6 @@
 
 <script>
 
-import Elections from '@/json/elections.json'
-
 export default {
     data: function() {
         return {
